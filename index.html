@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sindhuja's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Georgia, serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 20px 10%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .brand-logo {
+      width: 140px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      color: brown;
+    }
+
+    section {
+      display: none;
+      padding: 120px 10% 60px;
+      min-height: 100vh;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .photo-side {
+      position: fixed;
+      top: 100px;
+      right: 40px;
+      width: 220px;
+      height: auto;
+    }
+
+    .photo-side img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    h1 span {
+      color: blueviolet;
+    }
+
+    .content h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 18px;
+      max-width: 700px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .content a {
+      background: rgb(128, 126, 126);
+      padding: 10px 20px;
+      color: rgb(11, 11, 11);
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .content a:hover {
+      background: rgb(221, 229, 229);
+    }
+    #projects {
+            background-color: #f5f5f5;
+            padding: 40px 10%;
+        }
+
+        #projects h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .project {
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 20px;
+            border-left: 4px solid blueviolet;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3 {
+            color: rgb(31, 15, 181);
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            margin-bottom: 10px;
+        }
+
+        .project a {
+            color: #090909;
+            text-decoration: underline;
+        }
+
+        .project a:hover {
+            color: darkblue;
+        }
+        #contact {
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            width: 84%;
+        }
+
+        #contact h2 {
+            margin-bottom: 15px;
+            color: rgb(17, 17, 108);
+        }
+
+        #contact p {
+            margin: 8px 0;
+        }
+
+        #contact a {
+            color: blueviolet;
+            text-decoration: none;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="https://tse2.mm.bing.net/th?id=OIP.DaTGqdKCW1Yg-dL1tU5QAAHaC_&pid=Api&P=0&h=180" class="brand-logo" alt="logo" />
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+      <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="photo-side">
+    <img src="https://i.pinimg.com/736x/9f/8b/6c/9f8b6c9db8f3ebcbe8a70e261acb5014.jpg" alt="Portrait of Sindhuja">
+  </div>
+
+  <section id="home" class="active">
+    <div class="content">
+        <br><br><br><br><br>
+      <h1>I am Laxmireddygari <br><span>Sindhuja</span></h1><br><br><br>
+      <p>This is my portfolio. It contains all my personal details, skills, work experiences, and projects.</p><br>
+      <a href="https://drive.google.com/file/d/1r1-SLo0EjdrrNnxExh8kEhd7BW0eygqV/view?usp=drivesdk">Resume</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="content">
+      <h1>Hello, I'm <span>Sindhuja</span></h1>
+            <p>
+                Hi, I'm Laxmireddygari Sindhuja, a passionate and driven individual with a strong interest in technology,
+                creativity, and continuous learning. I'm currently studying at Malla Reddy University and honing my skills
+                in front-end development, Java, Python, and SQL.<br><br>
+                Beyond academics, I’m part of the university's cultural committee and a fitness enthusiast who believes in
+                discipline and balance.<br><br>
+                My dream is to become a businesswoman and make a positive impact on the tech world and beyond.
+            </p>
+      <p>I am a passionate student constantly exploring technology, committed to learning and growing every day.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="content">
+      <h2>Skills</h2><br><br>
+
+        <ul>
+            <li><strong>Programming Languages:</strong> Java (OOP), Python (Basics, Data Handling), SQL (Joins, Queries)</li>
+            <li><strong>Web Development:</strong> HTML5, CSS3, Basic JavaScript, Responsive Design</li>
+            <li><strong>Frameworks & Libraries:</strong> Bootstrap, Pandas, Matplotlib</li>
+            <li><strong>Tools & Technologies:</strong> VS Code, Git & GitHub, MySQL, Canva, MS Excel, Power BI</li>
+            <li><strong>Certifications:</strong> <br>Discover Financial Services-Professional Skills Job Simulation by Forage<br>
+                                                 NPTEL-Data Structures and Algorithms through Java<br> 
+                                                 Certificate of Internship Completion by Teachnook<br>
+                                                 Introduction to Data Science -Simplilearn<br>
+                                                 Certificate of Course Completion(Web Development)-Teachnook<br>
+                                                 Cambridge B2 (Soft Skills)</li>
+            <li><strong>Soft Skills:</strong> Leadership, Team Collaboration, Public Speaking, Time Management</li>
+            <li><strong>Interests:</strong> Fitness Tracking, Event Planning, Exploring Tech Trends</li>
+            <li><strong>Extracurricular activities: </strong> Executive member of Cultural Club ,Data Science Department, Malla Reddy University Hyderabad</li>
+        </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="content">
+      <h1>Projects</h1>
+
+        <div class="project">
+            <h3>Study Planner Application</h3>
+            <p>Developed an interactive web application using HTML, CSS, React, Bootstrap, and JavaScript to provide users with time management features.</p>
+            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript,Java</p>
+            <p><a href="https://github.com/LaxmireddygariSindhuja" target="_blank">GitHub Link</a></p>
+        </div>
+
+        <div class="project">
+            <h3>Google Android</h3>
+            <p>Collaborated with a team during an AICTE internship (July 2024 – Dec 2024) to optimize data structures using Java, enhancing performance in real-world applications.</p>
+            <p><strong>Technologies Used:</strong> Java</p>
+            <p><a href="https://github.com/LaxmireddygariSindhuja" target="_blank">GitHub Link</a></p>
+        </div>
+
+        <div class="project">
+            <h3>Vote Vibe Application</h3>
+            <p>Developed a voting system for NRIs, senior citizens, and PHC users using HTML, CSS, React, Bootstrap, and JavaScript.</p>
+            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript,Java</p>
+            <p><a href="https://github.com/LaxmireddygariSindhuja" target="_blank">GitHub Link</a></p>
+        </div>
+
+        <div class="project">
+            <h3>Rhyno Application</h3>
+            <p>Created a product showcase platform for a wheel company using HTML, CSS, React, Bootstrap, and JavaScript.</p>
+            <p><strong>Technologies Used:</strong> HTML, CSS, React,JavaScript</p>
+            <p><a href="https://github.com/LaxmireddygariSindhuja" target="_blank">GitHub Link</a></p>
+        </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="content">
+      <h1>Contact Me</h1>
+      <h2>Contact</h2>
+        <p>Email: <a href="mailto:laxmireddygaris@gmail.com">laxmireddygaris@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sindhuja-laxmireddy-99b37834b" target="_blank">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/Sindhujreddy" target="_blank">GitHub Profile</a></p>
+    </div>
+  </section>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
